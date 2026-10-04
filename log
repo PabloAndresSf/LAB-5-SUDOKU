@@ -65,3 +65,8 @@ graph.c:56:25: error: initialization of ‘int *’ from incompatible pointer ty
    56 |     list* nueva_lista = list_create();
       |                         ^~~~~~~~~~~
 e2cb6bc
+Sun Oct  4 05:07:35 PM UTC 2026: 
+ graph.c | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+ tests:  0|0
+5705808

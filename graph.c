@@ -53,7 +53,7 @@ void addNode(Graph* g, const char* label) {
 
     strcpy(copia_label, label);
 
-    list* nueva_lista = list_create();
+    List* nueva_lista = list_create();
 
     if(nueva_lista == NULL){
         free(copia_label);
