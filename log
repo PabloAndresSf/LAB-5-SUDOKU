@@ -35,3 +35,19 @@ Sun Oct  4 04:44:16 PM UTC 2026:
  1 file changed, 3 insertions(+), 3 deletions(-)
  tests:  0|0
 2a22d9d
+Sun Oct  4 05:04:02 PM UTC 2026: 
+ graph.c | 14 ++++++++++++++
+ 1 file changed, 14 insertions(+)
+Compilation failed
+In file included from test.c:5:
+graph.c: In function ‘addNode’:
+graph.c:54:31: error: expected ‘;’ before ‘:’ token
+   54 |     strcpy(copia_label, label):
+      |                               ^
+      |                               ;
+graph.c:58:8: error: ‘nueva_lista’ undeclared (first use in this function); did you mean ‘va_list’?
+   58 |     if(nueva_lista == NULL){
+      |        ^~~~~~~~~~~
+      |        va_list
+graph.c:58:8: note: each undeclared identifier is reported only once for each function it appears in
+d8ed418
