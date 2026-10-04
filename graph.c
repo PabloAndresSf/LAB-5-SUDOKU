@@ -73,7 +73,7 @@ void addEdge(Graph* g, const char* src, const char* dest, int weight) {
 
     List* lista_aristas = (List*)pair->value;
 
-    edge* nueva_arista = malloc(sizeof(Edge));
+    Edge* nueva_arista = malloc(sizeof(Edge));
     if(nueva_arista == NULL) return;
 
     nueva_arista->target = malloc((strlen(dest)+1)* sizeof(char));
