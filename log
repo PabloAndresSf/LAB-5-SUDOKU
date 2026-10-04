@@ -51,3 +51,17 @@ graph.c:58:8: error: ‘nueva_lista’ undeclared (first use in this function); 
       |        va_list
 graph.c:58:8: note: each undeclared identifier is reported only once for each function it appears in
 d8ed418
+Sun Oct  4 05:06:48 PM UTC 2026: 
+ graph.c | 4 +++-
+ 1 file changed, 3 insertions(+), 1 deletion(-)
+Compilation failed
+In file included from test.c:5:
+graph.c: In function ‘addNode’:
+graph.c:56:5: error: unknown type name ‘list’; did you mean ‘List’?
+   56 |     list* nueva_lista = list_create();
+      |     ^~~~
+      |     List
+graph.c:56:25: error: initialization of ‘int *’ from incompatible pointer type ‘List *’ [-Wincompatible-pointer-types]
+   56 |     list* nueva_lista = list_create();
+      |                         ^~~~~~~~~~~
+e2cb6bc

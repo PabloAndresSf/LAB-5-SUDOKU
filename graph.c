@@ -51,14 +51,16 @@ void addNode(Graph* g, const char* label) {
     char* copia_label = malloc((strlen(label) + 1) * sizeof(char));
     if(copia_label == NULL) return;
 
-    strcpy(copia_label, label):
+    strcpy(copia_label, label);
 
-    list* nueva_lista= list_create();
+    list* nueva_lista = list_create();
 
     if(nueva_lista == NULL){
         free(copia_label);
         return;
     }
+
+    map_insert(g->adjacencyMap, copia_label, nueva_lista);
 
 }
 
