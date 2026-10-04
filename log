@@ -10,3 +10,23 @@ Sun Oct  4 04:22:12 PM UTC 2026:
  tests:  0|6
 ========================================
 ea58a7d
+Sun Oct  4 04:42:47 PM UTC 2026: 
+ graph.c | 13 +++++++++++++
+ 1 file changed, 13 insertions(+)
+Compilation failed
+In file included from test.c:5:
+graph.c: In function ‘createGraph’:
+graph.c:30:29: error: ‘graph’ undeclared (first use in this function); did you mean ‘Graph’?
+   30 |     Graph* g= malloc(sizeof(graph));
+      |                             ^~~~~
+      |                             Graph
+graph.c:30:29: note: each undeclared identifier is reported only once for each function it appears in
+graph.c:36:8: error: ‘Graph’ has no member named ‘adjencyMap’; did you mean ‘adjacencyMap’?
+   36 |     g->adjencyMap = map_create(is_equal_string);
+      |        ^~~~~~~~~~
+      |        adjacencyMap
+graph.c:38:11: error: ‘Graph’ has no member named ‘adjencyMap’; did you mean ‘adjacencyMap’?
+   38 |     if(g->adjencyMap == NULL){
+      |           ^~~~~~~~~~
+      |           adjacencyMap
+0577654
