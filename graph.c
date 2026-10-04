@@ -104,14 +104,14 @@ int getWeight(Graph* g, const char* label1, const char* label2) {
 
     List* lista_aristas = getEdges(g, label1);
 
-    if(lista_aristas == NULL) return;
+    if(lista_aristas == NULL) return -1;
 
     Edge* arista = (Edge*)list_first(lista_aristas);
 
     while(arista != NULL){
-        if(strcmp(arista->target, label2)== 0) return arista wheight;
+        if(strcmp(arista->target, label2)== 0) return arista->wheight;
 
-        arista = (Edge*)list_next(lista_arista);
+        arista = (Edge*)list_next(lista_aristas);
     }
 
     // Si no existe el origen o terminamos de iterar sin encontrar el destino

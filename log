@@ -172,3 +172,14 @@ graph.c:114:35: error: ‘lista_arista’ undeclared (first use in this function
       |                                   lista_aristas
 graph.c:114:35: note: each undeclared identifier is reported only once for each function it appears in
 486a8df
+Sun Oct  4 08:54:10 PM UTC 2026: 
+ graph.c | 6 +++---
+ 1 file changed, 3 insertions(+), 3 deletions(-)
+Compilation failed
+In file included from test.c:5:
+graph.c: In function ‘getWeight’:
+graph.c:112:63: error: ‘Edge’ has no member named ‘wheight’; did you mean ‘weight’?
+  112 |         if(strcmp(arista->target, label2)== 0) return arista->wheight;
+      |                                                               ^~~~~~~
+      |                                                               weight
+70b5362
