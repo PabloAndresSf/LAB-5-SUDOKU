@@ -109,7 +109,7 @@ int getWeight(Graph* g, const char* label1, const char* label2) {
     Edge* arista = (Edge*)list_first(lista_aristas);
 
     while(arista != NULL){
-        if(strcmp(arista->target, label2)== 0) return arista->wheight;
+        if(strcmp(arista->target, label2)== 0) return arista->weight;
 
         arista = (Edge*)list_next(lista_aristas);
     }
