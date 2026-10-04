@@ -70,3 +70,49 @@ Sun Oct  4 05:07:35 PM UTC 2026:
  1 file changed, 1 insertion(+), 1 deletion(-)
  tests:  0|0
 5705808
+Sun Oct  4 05:20:59 PM UTC 2026: 
+ graph.c | 19 +++++++++++++++++++
+ 1 file changed, 19 insertions(+)
+Compilation failed
+In file included from test.c:5:
+graph.c: In function ‘addEdge’:
+graph.c:74:5: error: unknown type name ‘list’; did you mean ‘List’?
+   74 |     list* lista_aristas = (list*)pair->value;
+      |     ^~~~
+      |     List
+graph.c:74:28: error: ‘list’ undeclared (first use in this function); did you mean ‘List’?
+   74 |     list* lista_aristas = (list*)pair->value;
+      |                            ^~~~
+      |                            List
+graph.c:74:28: note: each undeclared identifier is reported only once for each function it appears in
+graph.c:74:33: error: expected expression before ‘)’ token
+   74 |     list* lista_aristas = (list*)pair->value;
+      |                                 ^
+graph.c:76:5: error: unknown type name ‘edge’; did you mean ‘Edge’?
+   76 |     edge* nueva_arista = malloc(sizeof(edge));
+      |     ^~~~
+      |     Edge
+graph.c:76:40: error: ‘edge’ undeclared (first use in this function); did you mean ‘Edge’?
+   76 |     edge* nueva_arista = malloc(sizeof(edge));
+      |                                        ^~~~
+      |                                        Edge
+graph.c:79:17: error: request for member ‘target’ in something not a structure or union
+   79 |     nueva_arista->target = malloc((strlen(dest)+1)* sizeof(char));
+      |                 ^~
+graph.c:81:24: error: request for member ‘target’ in something not a structure or union
+   81 |     strcpy(nueva_arista->target, dest);
+      |                        ^~
+graph.c:83:17: error: request for member ‘weight’ in something not a structure or union
+   83 |     nueva_arista->weight = weight;
+      |                 ^~
+graph.c:85:19: error: passing argument 1 of ‘list_pushBack’ from incompatible pointer type [-Wincompatible-pointer-types]
+   85 |     list_pushBack(lista_aristas, nueva_arista);
+      |                   ^~~~~~~~~~~~~
+      |                   |
+      |                   int *
+In file included from graph.h:4,
+                 from graph.c:6:
+list.h:20:26: note: expected ‘List *’ but argument is of type ‘int *’
+   20 | void list_pushBack(List *L, void *dato);
+      |                    ~~~~~~^
+93e542d
