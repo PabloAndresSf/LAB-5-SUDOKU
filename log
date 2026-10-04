@@ -147,3 +147,28 @@ Sun Oct  4 08:43:22 PM UTC 2026:
  tests:  8|2
 ========================================
 a9db583
+Sun Oct  4 08:50:36 PM UTC 2026: 
+ graph.c | 12 ++++++++++++
+ 1 file changed, 12 insertions(+)
+Compilation failed
+In file included from test.c:5:
+graph.c: In function ‘getWeight’:
+graph.c:107:31: error: ‘return’ with no value, in function returning non-void [-Wreturn-mismatch]
+  107 |     if(lista_aristas == NULL) return;
+      |                               ^~~~~~
+graph.c:102:5: note: declared here
+  102 | int getWeight(Graph* g, const char* label1, const char* label2) {
+      |     ^~~~~~~~~
+graph.c:112:55: error: returning ‘Edge *’ from a function with return type ‘int’ makes integer from pointer without a cast [-Wint-conversion]
+  112 |         if(strcmp(arista->target, label2)== 0) return arista wheight;
+      |                                                       ^~~~~~
+graph.c:112:61: error: expected ‘;’ before ‘wheight’
+  112 |         if(strcmp(arista->target, label2)== 0) return arista wheight;
+      |                                                             ^~~~~~~~
+      |                                                             ;
+graph.c:114:35: error: ‘lista_arista’ undeclared (first use in this function); did you mean ‘lista_aristas’?
+  114 |         arista = (Edge*)list_next(lista_arista);
+      |                                   ^~~~~~~~~~~~
+      |                                   lista_aristas
+graph.c:114:35: note: each undeclared identifier is reported only once for each function it appears in
+486a8df
