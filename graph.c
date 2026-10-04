@@ -27,15 +27,15 @@ int is_equal_string(void *key1, void *key2) {
  * ========================================= */
 
 Graph* createGraph() {
-    Graph* g= malloc(sizeof(graph));
+    Graph* g= malloc(sizeof(Graph));
 
     if(g == NULL){
         return NULL;
     }
     
-    g->adjencyMap = map_create(is_equal_string);
+    g->adjacencyMap = map_create(is_equal_string);
 
-    if(g->adjencyMap == NULL){
+    if(g->adjacencyMap == NULL){
         free(g);
         return NULL;
     }
